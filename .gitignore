@@ -1,0 +1,16 @@
+# Python
+*.pyc
+__pycache__/
+
+# Airflow
+airflow.db
+airflow.cfg
+
+# Environment variables
+.env
+config.py  # If you store sensitive data here
+
+# IDEs
+.vscode/
+.idea/
+,venv/

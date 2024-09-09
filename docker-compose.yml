@@ -1,0 +1,14 @@
+version: '3'
+
+services:
+  webserver:
+    image: apache/airflow:2.3.0
+    environment:
+      - AIRFLOW__CORE__LOAD_EXAMPLES=False
+      - INFURA_URL=${INFURA_URL}
+      - DISCORD_TOKEN=${DISCORD_TOKEN}
+      - ERC20_CONTRACT_ADDRESS=${ERC20_CONTRACT_ADDRESS}
+    volumes:
+      - ./dags:/opt/airflow/dags
+    ports:
+      - "8080:8080"
